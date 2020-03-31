@@ -10,9 +10,9 @@
 }
 
 /* Switch off some bootstrap styles */
-h4 {
+/* h4 {
     font-size: unset;
-}
+} */
 
 li, a, button{
     font-family: 'Quicksand', sans-serif;
