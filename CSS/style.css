@@ -2,11 +2,16 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:500&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400&display=swap');
 /* Header start */
-*{
+*, p {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Quicksand', sans-serif;
+}
+
+/* Switch off some bootstrap styles */
+h4 {
+    font-size: unset;
 }
 
 li, a, button{
@@ -44,7 +49,7 @@ header{
     color: rgb(182, 172, 162);
 }
 
-.navlinks .currentPage{
+.navigationBar .currentPage{
     color: #b6aca2;
 }
 
@@ -525,8 +530,14 @@ color: #af5e65;
     text-align: center;
 }
 
+.footer .footer-content {
+    line-height: normal;
+}
+
 .footer .footer-content h4{
     letter-spacing: 0.15em;
+    margin-bottom: 0;
+    font-weight: bold;
 }
 
 .footer .footer-content p{
