@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="CSS/reservation.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation form</title>
+</head>
+
+<body>
+    <div class="container" id="reserveForm">
+        <div class="container-form">
+            <h3 class="page-title">MAKE A RESERVATION</h3>
+            <p>To book, please call us or complete the form below. You can make a reservation any time online or by
+                calling us
+                during our opening hours. We only accept online reservation for up to 10 people. For larger groups,
+                please
+                make a request via <a href="mailto:info@miels.co.uk">info@miels.co.uk</a></p>
+            <form method="post" action="#" name="reservation-form" onsubmit="return validateForm()">
+
+                <label for="yourname">Full Name&nbsp;<abbr class="required" title="required field">*</abbr></label>
+                <input type=text name="cName" id="yourname" class="form-class" required>
+                <br>
+
+                <label for="youremail">Email&nbsp;<abbr class="required" title="required field">*</abbr></label>
+                <input type=text name="cEmail" id="youremail" required>
+                <br>
+
+                <label for="date">Date&nbsp;<abbr class="required" title="required field">*</abbr></label>
+                <input type=text name="cName" id="date" placeholder="dd/mm/yyyy" required>
+                <br>
+
+                <label for="time">Time&nbsp;<abbr class="required" title="required field">*</abbr></label>
+                <input type=text name="cTime" id="time" placeholder="--:-- am/pm" required>
+
+                <br>
+
+                <label for="persons">Number of guests&nbsp;<abbr class="required" title="required field">*</abbr></label>
+                <select id="persons" class="form-class" name="guests" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <br>
+                <label for="request">Special Requests</label>
+                <textarea id="request" name="special-request" class="form-class" rows="3" cols="30">
+                </textarea>
+                <br>
+                <br>
+                <button type="submit" class="btnBook" >BOOK NOW</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btnCancel" onclick="window.close()">CANCEL</button>
+            </form>
+        </div>
+        <div class="container-info">
+            <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+          <a href="Index.html"><img class="logo" src="MIEL Images/Logo 3.png" alt="logo"></a>  
+            <h4>OPENING HOURS</h4>
+
+            <p>Mon-Fri: 11.30 am - 11 pm</p>
+            <p>Sat: 11 am - 10 pm</p>
+            <p>Sun: Closed</p>
+            <br>
+            <h4>ADDRESS</h4>
+
+            <p>10 Lower Thames Street,</p>
+            <p>Billingsgate,</p>
+            <p>London EC3R 6YT</p>
+            <br>
+            <H4>CONTACT</H4>
+
+            <p>info@miels.co.uk</p>
+            <p>020 723 9810</p>
+            <br>
+            <H4>CONNECT WITH US</H4>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-pinterest"></i></a>
+        </div>
+
+    </div>
+    <script src="miels.js"></script>
+</body>
+
+</html>

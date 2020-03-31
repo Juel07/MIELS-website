@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400&display=swap');
+
+body{
+font-family: 'Quicksand', sans-serif;
+font-size: 14px;
+color: #ffff;
+
+}
+
+.container{
+    background-color: #f8f8f8;
+    color: rgb(110, 110, 110);
+    margin: 50px;
+    box-shadow: black;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    text-align: left;
+    border: 3px solid black;
+}
+/* INFORMATION WITH FORM */
+.container-info{
+    padding: 60px;
+    background-color: #af5e65;
+    color:#f8f8f8;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+    align-items: center;
+}
+
+h4{
+    color: black;
+    letter-spacing: 0.15em;
+}
+/* social media links */
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid white;
+    color: black;
+  }
+  
+  /* hover effect */
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  /* FORM */
+.container-form{
+    padding: 60px;
+    margin: 0 auto;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.page-title{
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    letter-spacing: 0.15em;
+}
+
+input, select, textarea {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+    color: rgb(104, 104, 104);
+    cursor: text;
+    margin: 0;
+    padding: 3px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+}
+
+input:focus, select:focus, textarea:focus{
+   border-bottom: 2px solid #af5e65;
+}
+
+label{
+    font-weight: bolder;
+}
+
+.required{
+color: red;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* unvisited link */
+a:link {
+color: black
+}
+  
+/* mouse over link */
+a:hover {
+color: #af5e65;
+}
+
+/* BOOK NOW button */
+.btnBook{
+    background-color: black;
+    color: white;
+    width: 250px;
+    height: 30px;
+    line-height: 1;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btnBook:hover {
+    background-color: #fff;
+    font-weight: bolder;
+    color:black;
+    border: 2px solid black;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Cancel button */
+.btnCancel{
+    background-color: black;
+    color: white;
+    width: 250px;
+    height: 30px;
+    line-height: 1;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btnCancel:hover {
+    background-color: #fff;
+    font-weight: bolder;
+    color:black;
+    border: 2px solid black;
+    transition: all 0.3s ease-in-out;
+}
