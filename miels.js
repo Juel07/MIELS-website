@@ -90,16 +90,15 @@ function ready() {
 // }
 
 // Trial 2:
-function purchaseClicked() {
-  // alert('Thanks for your order. Please proceed to Checkout page')
-  var cartItems = document.getElementsByClassName('cart-items')[0]
-  if (cartItems = "")
-   {
-    alert('Please select items to order');
-  } else {
-    document.location.href = "checkout.html";
-    }
-}
+
+// function purchaseClicked() {
+//   var cartItems = document.getElementsByClassName('cart-items')[0]
+//   if (cartItems = "") {
+//     alert('Please select items to order');
+//   } else {
+//     document.location.href = "checkout.html";
+//   }
+// }
 
 // Trial 3:
 
@@ -116,6 +115,18 @@ function purchaseClicked() {
 //   alert("There is nothing in your cart!");
 //   }
 // }
+
+// Trial 4:
+
+function purchaseClicked() {
+  var cartItems = document.getElementsByClassName('cart-items')[0]
+  if (cartItems.hasChildNodes())
+  document.location.href = "checkout.html";
+  else {
+    document.getElementsByClassName('btn-purchase').disabled = true;
+  }
+}
+
 
 function removeCartItem(event) {
   var buttonClicked = event.target
