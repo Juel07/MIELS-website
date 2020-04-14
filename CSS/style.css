@@ -95,6 +95,11 @@ body {
 }
 
 /* [1] Interiors image start */
+
+.interiorClass{
+    position: relative;
+}
+
 .interiorClass img{
     height: auto;
     width: 100%;
@@ -104,7 +109,7 @@ body {
 
 .interiorClass .btnReserve{
     position: absolute;
-    top: 85%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
