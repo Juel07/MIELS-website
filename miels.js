@@ -1,28 +1,10 @@
-// IGNORE
-// function openForm() {
-//   document.getElementById("reserveForm").style.display = "block";
-// }
-// function closeForm() {
-//   document.getElementById("reserveForm").style.display = "none";
-// }
-
-// function validateForm() {
-//   var x = document.forms["reservation-form"]["cName"].value;
-//   if (x == "") {
-//     alert("Please provide your name");
-//     return false;
-//   }
-// } 
 
 // CHECKOUT FORM JS - disabling form submissions if there are invalid fields
 (function () {
   'use strict'
 
   window.addEventListener('load', function () {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
     var forms = document.getElementsByClassName('needs-validation')
-
-    // Loop over them and prevent submission
     Array.prototype.filter.call(forms, function (form) {
       form.addEventListener('submit', function (event) {
         if (form.checkValidity() === false) {
@@ -67,71 +49,32 @@ function ready() {
   document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 
-// function purchaseClicked() {
-//   alert('Thanks for your order. Please proceed to Checkout page')
-//   var cartItems = document.getElementsByClassName('cart-items')[0]
-//   while (cartItems.hasChildNodes()) {
-//     cartItems.removeChild(cartItems.firstChild)
-//   }
-//   updateCartTotal()
-// }
 
-// Trial 1: Go to checkout page only if something is in the cart
-
-// function purchaseClicked() {
-//   alert('Thanks for your order. Please proceed to Checkout page')
-//   var cartItems = document.getElementsByClassName('cart-items')[0]
-//   if (cartItems.hasChildNodes())
-//    {
-//     document.location.href = "checkout.html";
-//   } else {
-//     alert('Please select items to order');
-//     }
-// }
-
-// Trial 2:
-
-// function purchaseClicked() {
-//   var cartItems = document.getElementsByClassName('cart-items')[0]
-//   if (cartItems = "") {
-//     alert('Please select items to order');
-//   } else {
-//     document.location.href = "checkout.html";
-//   }
-// }
-
-// Trial 3:
-
-// function purchaseClicked(){
-// if (document.getElementsByClassName('cart-items')[0].hasChildNodes()){
-//   alert('Thanks for your order. Please proceed to Checkout page')
-//   document.location.href = "checkout.html";
-//     var cartItems = document.getElementsByClassName('cart-items')[0]
-//   while (cartItems.hasChildNodes()) {
-//       cartItems.removeChild(cartItems.firstChild)     
-//   }
-// }   
-// else {
-//   alert("There is nothing in your cart!");
-//   }
-// }
-
-// Trial 4:
 
 function purchaseClicked() {
-  var cartItems = document.getElementsByClassName('cart-items')[0]
-  if (cartItems.hasChildNodes())
   document.location.href = "checkout.html";
-  else {
-    document.getElementsByClassName('btn-purchase').disabled = true;
-  }
 }
 
+function disableCheckout()
+{
+  
+  var cartRowCount = document.getElementsByClassName("cart-row").length - 1;
+  if(cartRowCount == 0)
+  {
+    
+    document.getElementById("btnCheckout").disabled = true;
+    alert("Your basket is empty.");
+  }
+  else{
+    document.getElementById("btnCheckout").disabled = false;
+  }
+}
 
 function removeCartItem(event) {
   var buttonClicked = event.target
   buttonClicked.parentElement.parentElement.remove()
   updateCartTotal()
+  disableCheckout();
 }
 
 function quantityChanged(event) {
@@ -178,6 +121,7 @@ function addItemToCart(title, price, imageSrc) {
   cartItems.append(cartRow)
   cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
   cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
+  document.getElementById("btnCheckout").disabled = false;
 }
 
 function updateCartTotal() {
