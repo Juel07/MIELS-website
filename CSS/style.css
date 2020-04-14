@@ -14,6 +14,10 @@
     font-size: unset;
 } */
 
+main{
+    background-color: #fff;
+}
+
 li, a, button{
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
