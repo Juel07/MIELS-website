@@ -687,13 +687,17 @@ position: relative;
     
 }
 
-.btn-purchase:hover {
+.btn-purchase:enabled:hover {
     background-color: #fff;
     font-weight: bolder;
     color:black;
     border: 2px solid black;
     transition: all 0.3s ease-in-out;
     line-height: 1;
+}
+
+.btn-purchase:disabled {
+    opacity: 0.5;
 }
 
                                                     /* Order page - Shopping end */
